@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Asssignment</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="">For Trainers</a>
+                    <ul> 
+                        <li><a href="trainer.html">Trainer</a></li>
+                        <li><a href="trainer_course.html">Trainer ~ Course</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="">For Courses</a>
+                    <ul>
+                        <li><a href="course.html">Course</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="">For Assignments</a>
+                    <ul>
+                        <li><a href="assignment.html">Assignment</a></li>
+                        <li><a href="assignment_course.html">Assignment ~ Course</a></li>
+                        <li><a href="assignment_course_student.html">Assign. ~ Student ~ Course</a></li>
+                    </ul>
+                </li>
+                <li><a href="">For Students</a>
+                    <ul>
+                        <li><a href="student.html">Student</a></li>
+                        <li><a href="student_course.html">Student ~ Course</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">  
+
+        <!-- 3  ASSIGNMENT FORM -->
+
+        <section class="section" id="assignment">
+
+            <section class="form_header">
+                <h2>Assignment</h2>
+            </section>
+            
+            <section class="form">
+            <form id="assignment_form" name="" action="" method="post" onsubmit="return assignment_getInputValue()">
+                    
+                <section class="form_field">
+                    <label for="assignment_title">Title of Assignment</label>
+                    <input type="text" class="input" id="assignment_title" name="" placeholder="..." maxlength="25" />
+                    <div class="error_text" id="assignment_title_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <label for="assignment_description">Description of Assignment</label>
+                    <select class="input" id="assignment_description" name="" >
+                        <option value="" disabled selected></option>
+                        <option value="Front-End">Front-End</option>
+                        <option value="Back-End">Back-End</option>
+                        <option value="Full Stack">Full Stack</option>
+                    </select>
+                    <div class="error_text" id="assignment_description_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <label for="subject_date">Subject Date Time</label>
+                    <input type="date" class="input" id="assign_subject_date" name="" value="" min="2020-01-01" max="2020-12-31" />
+                    <div class="error_text" id="assign_subject_date_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <div class="mark-o">
+                        <label for="oralMark">Oral Mark</label>
+                        <input type="number" class="input" id="assign_oralMark" name=""/>
+                        <div class="error_text" id="assign_oralMark_error"></div>
+                    </div>
+                    <div class="mark-t">
+                        <label for="totalMark">Total Mark</label>
+                        <input type="number" class="input" id="assign_totalMark" name=""/>
+                        <div class="error_text" id="assign_totalMark_error"></div>
+                    </div>
+                </section>
+
+                <hr>
+
+                <section class="form_button">
+                    <section class="form_IsValidated" id="assignment_formIsValidated"></section>
+                    <input type="submit" name="submit" value="SUBMIT" />
+                </section>
+
+            </form>
+            </section>
+
+        </section>
+
+        <section class="results">       <!-- The table for the given of trainer -->
+            
+            <div class="results_header">
+                <h2>Data for Assignments</h2>
+            </div>
+
+            <div class="tables">
+                <div class="tables_index">
+                
+                    <div class="HTML_section_table">
+                        <table class="primary_table">
+                            <tr>
+                                <td class="primary_td">Title</td>
+                                <td class="primary_td">Description</td>
+                                <td class="primary_td">Subject Date</td>
+                                <td class="primary_td">Oral Mark</td>
+                                <td class="primary_td">Total Mark</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="DOM_section_table">
+                        <table class="DOM_table" id="assignment-table">
+                            <tr></tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <section class="footer-header">
+            <h3>Ωmega Schools</h3>
+            <p>Empowering youths, rising tallents</p>
+            <p>Since 1968</p>
+        </section>
+
+        <section class="footer-body">
+            <p>Adress: Lorem Str. Ipsum square 1200, London</p>
+            <p>Phone: +99 123321123</p>
+            <p>E-mail: omegaschools@kl</p>
+        </section>
+
+    </footer>
+    
+</div>    
+
+<script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Course</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="">For Trainer</a>
+                    <ul>
+                        <li><a href="trainer.html">Trainer</a></li>
+                        <li><a href="trainer_course.html">Trainer ~ Course</a></li>
+                    </ul>
+                </li>
+                <li><a href="">For Courses</a>
+                    <ul>
+                        <li><a href="course.html">Course</a></li>
+                    </ul>
+                </li>
+                <li><a href="">For Assignment</a>
+                    <ul>
+                        <li><a href="assignment.html">Assignment</a></li>
+                        <li><a href="assignment_course.html">Assignment ~ Course</a></li>
+                        <li><a href="assignment_course_student.html">Assign. ~ Student ~ Course</a></li>
+                    </ul>
+                </li>
+                <li><a href="">For Student</a>
+                    <ul>
+                        <li><a href="student.html">Student</a></li>
+                        <li><a href="student_course.html">Student ~ Course</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- 2  COURSE FORM -->
+
+        <section class="section">
+
+                <section class="form_header">
+                    <h2>Course</h2>
+                </section>
+
+            <section class="form">
+            <form id="course_form" name="" method="post" onsubmit="return course_getInputValue()">
+
+                <section class="form_field">
+                    <label for="title">Title of Course</label>
+                    <select class="input" id="course_title" name="">
+                        <option value="" disabled selected></option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="C#">C#</option>
+                        <option value="Java">Java</option>
+                    </select>
+                    <div class="error_text" id="course_title_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <label for="stream">Stream of Course</label>
+                    <select class="input" id="course_stream" name="">
+                        <option value="" disabled selected></option>
+                        <option value="Beginner level">Beginer level</option>
+                        <option value="Intermediate level">Intermediate level</option>
+                        <option value="Advanced level">Advanced level</option>
+                    </select>
+                    <div class="error_text" id="course_stream_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <label for="type">Type of Course</label>
+                    <select class="input" id="course_type" name="">
+                        <option value="" disabled selected></option>
+                        <option value="Full time">Full time</option>
+                        <option value="Part time">Part time</option>
+                        <option value="Online">Online</option>
+                    </select>
+                    <div class="error_text" id="course_type_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <div class="date-s">
+                        <label for="startdate">Start Date</label>
+                        <input type="date" class="input" id="course_startdate" name="" value="" min="2020-01-01" max="2020-12-31" />
+                        <div class="error_text" id="course_startdate_error"></div>
+                    </div>
+                    <div class="date-e">
+                        <label for="endtdate">End Date</label>
+                        <input type="date" class="input" id="course_enddate" name="" value="" min="2020-01-01" max="2020-12-31"/>
+                        <div class="error_text" id="course_enddate_error"></div>
+                    </div>
+                </section>
+                
+                <hr>
+
+                <section class="form_button">
+                    <section class="form_IsValidated" id="course_formIsValidated"></section>
+                    <input type="submit" name="submit" value="SUBMIT" />
+                </section>
+
+            </form>
+            </section>
+
+            
+
+        </section>    
+
+        <section class="results">       <!-- The table for the given of trainer -->
+        
+            <div class="results_header">   
+                <h2>Data for Courses</h2>
+            </div>
+
+            <div class="tables">
+
+                <div class="tables_index">
+
+                    <div class="HTML_section_table">
+
+                        <table class="primary_table">
+                            <tr>
+                                <td class="primary_td">Title</td>
+                                <td class="primary_td">Stream</td>
+                                <td class="primary_td">Type</td>
+                                <td class="primary_td">Start Date</td>
+                                <td class="primary_td">End Date</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="DOM_section_table">
+                        <table class="DOM_table" id="course-table">
+                            <tr></tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+
+        <section class="footer-header">
+            <h3>Ωmega Schools</h3>
+            <p>Empowering youths, rising tallents</p>
+            <p>Since 1968</p>
+        </section>
+
+        <section class="footer-body">
+            <p>Adress: Lorem Str. Ipsum square 1200, London</p>
+            <p>Phone: +99 123321123</p>
+            <p>E-mail: omegaschools@kl</p>
+        </section>
+
+    </footer>
+    
+</div>    
+
+<script src="index.js"></script>
+
+</body>
+
+</html>

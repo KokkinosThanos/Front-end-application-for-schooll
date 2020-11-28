@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Assignment per Course per Student</title>
+</head>
+<body>
+
+<div id="container">
+
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="">For Trainers</a>
+                    <ul>
+                        <li><a href="trainer.html">Trainers</a></li>
+                        <li><a href="trainer_course.html">Trainer ~ Course</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="">For Courses</a>
+                    <ul>
+                        <li><a href="course.html">Course</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="">For Assignments</a>
+                    <ul>
+                        <li><a href="assignment.html">Assignment</a></li>
+                        <li><a href="assignment_course.html">Assignment ~ Course</a></li>
+                        <li><a href="assignment_course_student.html">Assign. ~ Student ~ Course</a></li>
+                    </ul>
+                </li>
+                <li><a href="">For Students</a>
+                    <ul>
+                        <li><a href="student.html">Student</a></li>
+                        <li><a href="student_course.html">Student ~ Course</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+                <!-- 8  ASSIGNMENT PER STUDENT PER COURSE -->
+
+        <section class="section">
+
+            <section class="form_header">
+                <h2>Assignment per Student per Course</h2>
+            </section>
+
+            <section class="form">
+            <form id="assignment_course_student_form" action="" method="POST" onsubmit="return assignment_course_student_getInputValue()">
+
+                <section class="form_field">
+                    <label for="Asc_title">Title of Assignment</label>
+                    <input type="text" class="input" id="Asc_title" name="" placeholder="..." />
+                    <div class="error_text" id="Asc_title_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <label for="Asc_description">Description of Assignment</label>
+                    <select class="input" id="Asc_description" name="" >
+                        <option value="" disabled selected></option>
+                        <option value="Front-End">Front-End</option>
+                        <option value="Back-End">Back-End</option>
+                        <option value="Full Stack">Full Stack</option>
+                    </select>
+                    <div class="error_text" id="Asc_description_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <label for="Asc_date">Subject Date Time</label>
+                    <input type="date" class="input" id="Asc_date" name="" value="" min="2020-01-01" max="2020-12-31" />
+                    <div class="error_text" id="Asc_date_error"></div>
+                </section>
+
+                <section class="form_field">
+                    <div class="mark-o">
+                    <label for="Asc_oralMark">Oral Mark</label>
+                    <input type="number" class="input" id="Asc_oralMark" name="" />
+                    <div class="error_text" id="Asc_oralMark_error"></div>
+                    </div>
+
+                    <div class="mark-t">
+                    <label for="Asc_totalMark">Total Mark</label>
+                    <input type="number" class="input" id="Asc_totalMark" name="" />
+                    <div class="error_text" id="Asc_totalMark_error"></div>
+                    </div>
+                </section>
+
+                <section class="form_field">
+                    <label for="Asc_courseTitle">Title of Course</label>
+                    <select class="input" id="Asc_courseTitle" name="" >
+                        <option value=""></option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="C#">C#</option>
+                        <option value="Java">Java</option>
+                    </select>
+                    <div class="error_text" id="Asc_courseTitle_error"></div>
+                </section>
+        
+                <section class="form_field">
+                    <div class="date-s">
+                        <label for="Asc_courseStartdate">Course Start Date</label>
+                        <input class="input" type="date" id="Asc_courseStartdate" name="" value="" min="2020-01-01" max="2020-12-31" />
+                        <div class="error_text" id="Asc_courseStartdate_error"></div>
+                    </div>
+                    <div class="date-e">
+                        <label for="Asc_courseEndtdate">Course End Date</label>
+                        <input class="input" type="date" id="Asc_courseEndtdate" name="" value="" min="2020-01-01" max="2020-12-31" />
+                        <div class="error_text" id="Asc_courseEndtdate_error"></div>
+                    </div>
+                </section>
+
+                <section class="form_field">  
+                    <label for="Asc_student_fname">Student First Name</label>
+                    <input class="input" type="text" id="Asc_student_fname" name="" placeholder="..." />
+                    <div class="error_text" id="Asc_student_fname_error"></div>
+                </section>  
+
+                <section class="form_field">
+                    <label for="Asc_student_lname">Student Last Name</label>
+                    <input type="text" class="input" id="Asc_student_lname" name="" placeholder="..." />
+                    <div class="error_text" id="Asc_student_lname_error"></div>
+                </section>
+
+                <hr>
+
+                <section class="form_button">
+                    <section class="form_IsValidated" id="assignment_course_student_formIsValidated"></section>
+                    <input type="submit" name="submit" value="SUBMIT" />
+                </section>
+
+            </form>
+            </section>
+
+            
+
+        </section>
+
+        <div class="results">       <!-- The table for the given of trainer -->
+            
+            <div class="results_header">
+                <h2>Data for Assign ~ Course ~ Student</h2>
+            </div>
+
+                <div class="tables">
+                    
+                    <div class="tables_index">
+    
+                    <div class="HTML_section_table">
+    
+                        <table class="primary_table">
+                            <tr>
+                                <td class="primary_td">Assign. Title</td>
+                                <td class="primary_td">Assign. Description</td>
+                                <td class="primary_td">Subject Date</td>
+                                <td class="primary_td">Oral Mark</td>
+                                <td class="primary_td">Total Mark</td>
+                                <td class="primary_td">Course Title</td>
+                                <td class="primary_td">Start Date</td>
+                                <td class="primary_td">End Date</td>
+                                <td class="primary_td">First Name</td>
+                                <td class="primary_td">Last Name</td>
+                            </tr>
+                        </table>
+    
+                    </div>
+    
+                    <div class="DOM_section_table">
+                        <table class="DOM_table" id="acs-table">
+                            <tr></tr>
+                        </table>
+                    </div>
+    
+                    </div>
+                    
+                </div>
+    
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <section class="footer-header">
+            <h3>Ωmega Schools</h3>
+            <p>Empowering youths, rising tallents</p>
+            <p>Since 1968</p>
+        </section>
+
+        <section class="footer-body">
+            <p>Adress: Lorem Str. Ipsum square 1200, London</p>
+            <p>Phone: +99 123321123</p>
+            <p>E-mail: omegaschools@kl</p>
+        </section>
+
+    </footer>
+
+</div>    
+
+<script src="index.js"></script>
+
+</body>
+</html>
