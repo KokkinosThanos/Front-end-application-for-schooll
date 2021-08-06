@@ -1,9 +1,13 @@
-# Omega Schools (client side)
+# Omega Schools Client
 
-This is an application for a schooll to submit data like teachers, students, assignmnents, etc.
+This is a client side application for submitting data to the respective forms. 
+There is a client side form validation and the layout is made with CSS.
 
-Here I'm using Html, Css and Javascript to create the client-side interface and experience.
+------------------
+Web Technologies
 
-There are forms to submit the date, front-end validation and tables to appear all records of data.
+- Html
+- Css
+- Javascript
 
 
